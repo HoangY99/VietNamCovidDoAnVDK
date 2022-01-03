@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAqFBMVEX///8hFVEAAEEAAEMAAD4AAEQAAD8AADwAAEYdEE8fElAPAEkAADgLAEgAADqLiZ0VAEsXBUwZCU3KyNK7ucUXBEzW1NyAfJWHg5r4+Pqsqrnw7/Pn5uuXlKcbDU57d5EAAC5CO2azsb5VUHOkobJxbIloY4I6MmE1LF4rIVhZVHaUkaW4tsMpHlfd3ONKRGwAACcAADRrZoRGP2nOzdZPSXAAACwyKF1w1tYxAAAKu0lEQVR4nO2daXeiPBSAJQkYiFEUq+CCVUFbHe07Xcb//89eViUosSpbe/J8mHMojOSScHOX5NJoCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAkFBWCNzuq+6EUViAExoa1Z1M4pj39IkD2hW3ZDCWHalgNa46pYURSsUUJL7VbekIKz2b5ewsVNDCduTqltSFCMQCKgvq25IcbwTT0CN/GBFMzDdLXcE2t50AQzOBZYzm9X4LZ21iU5bW84VCyz1vjjnDYR1HaytvFuWE9PwNWv+4VwDuIp00gxMAvKRe9vyAYWaUtU416yemskOMu11UuAhCX8CfRbUxMcYgGi6QxxNMsW7xNEKqnYrIWI8ndBpYa18hE8YSahwJBzBxFQx9k2A5HtZcwmt2Chrci5agISEk6Yv4fz0h9VT+AugpurUlIPmaZRzDSNhY257Y9o5HQ/14Be6h6Ka+CgbJXAeMOcSVkKHSijpSs18CVWs1tck6G+QfcMo9V5dMEqe3fQkDR6cRp0ZrKkEB9nnWQkHbZc5C6UeXhTTsBx5x6STfXaR1KWN/jNj4xmwd6jvAD2xITjb6nLwOnFksiplo9t1tddYdJodiJnpKHEkMb39iRBnfNeJPkCZDgbV4Mm1mDwzbsYLdc+urykfJMt/6MuSvjoeLZ6T5xzIM/fqxb6pZBglqmeWKceOmyfMmYYFcD1ttYvMqHTx76vQx4/UiaNsvvF/6okl40vKphPa5t1QnTpIfT2d+0R1NUYvM6UoNXPv+9NV7Hzo687IWHpHJ400od15+kdqzRhJ6BTNGGzfIMBUl2JsguWe78wPoysMqGJeaKCGHFQJH4I2D8wuoD3pMjDo6cFG0bheZR3xPT1blmfODhA1Q7zADwGd7Q74biGousk34gZDUtMpT7wAEj4BrldZPpZhXBlTq+41ydLwfC7/lv1+ibkAswVhi29hvVztuzR8g6bTkuX2piy73A20PuUGNdvXBDoD8iKI4S3JmnNJjgyi1gOOr9rHN0uoD7N/bh/dEo6yr8mRThS2tV8yL3HQzQJKkrzK/L04UtzdZF6SJ7N45s5MsbggUwweNCtfMY4fmF3OMHVodD81wyP/un2IRl30dFldxvn/pOdVJOM48ivpF93ANblTQN9GuLTYZnh8Yk1eYi5HRi3fCPNdPfJxruLnOkeEa6j4vBd9PaqqmvcPKm0lzue8heBhDQDVYTq4+XV/Dwa9qKeemSFRApqHNWm2pTIDjVbQjomjyfCVGTkuvS4Flx4TfpssFSp3gqFrVRSGczBFm9PIcu7ToknISZtYJqJoWHWA0Zq1KZqFCmK8uGceTCOb4RObTDFWlnVYmLL/AgTg5eZNRvdOEywEoPVmoyGKdyXpzqsskKb1unYu4oXY3Z7KpqUqZqDkKF2MUqsc1J/HNUwawrHEq+ArKxJzLxqpWqQUn3l3Yv0WK+xudur5tCsOvU3MWUqRbx+z1tL0UusXB8NhqZm3fZuSFqvqRo+aayw6GwYyWoS0yoz6L/0AJ2J68TXvUZo01ibYdy16JUpoB+IkV8IM8tY0OBGS6cPgfkqJFmrgQXRpG8z64V37eXehN1tEz8/o9FpY9/qwV1KkLcA6ABmsnNH27e+/l8522IN5C+iJiOFsu/369/zScRwXQwjL3Wxj9ENtbhmmAvT85Qtk1GHLje/T71foRc3g9dbeBS0tyH2NYT5eUxq9nOjot5jn6TnFaHrVYiUw5AIkpHXynu5IU1yHtzyudLb5mmwhJSUpWPb7y8ptmbd36KNlWGn74kzwBVXAxQ2gqyK60OvE+YXnOUUAIN6mlQcYtf3tHvSQNi0m62IE9ETU01nT8TKYe0Eh4f1xlKW0kZuUcbxVihiiIVociY2eZQdEi/nbRWw5GR31pQ70ldkJcA8oX883ja7Ybngv092d7lVImGqaGIs2hsAH4puXXNyMjUF0r8RYKSSReOpDoqjvcR+um0X34avbifrwBVEtbkIRfRgnRm1lyLyHnQLfQzX1Hk7lKDlZyHvYcNq+k4Rf0rmSybwoXarb6anP06VeN2rF6FLPNiMItC/lEt5LnA8diAAqLpY6ych1bQqxadSMRlRRWGP6a+zSLP78et9in3/qqWb+YaMICTXO5qLy+ShC1XTfqhYrQc55mQjyVp+1359FBBQ1XT7GSxv9PxWPWaxdb/GN8mHZ3Xbe/j1Ls0pi3mlmj6xmuyigHqVmjI4d5S2y17OWgVFo7gmHua5qx2k359xFk80fqiXnDy/g5JwDZr2H0nPAF8jZNE0bpXvTrHoH7aHIUVoHcs9y18sqbSQWm+eF2q1aJJZ+/qY3Z8t7BexB7iaNN/2Vs0HmW/QVzZutcsySar1uT5OKSk/czGQDdIgOyzlU8pkxCMJfmy+iUHyowxphy2wR5IZz1djJYyWt3AndiclUZlbJV8SIUvBxmovNxwM25DTXW7MmrXYp9Hj0AjFh9mA/nCvtMh7E/g1gsg33W5TpDQ82rfbLZikhrCspbfCoeXq2Z6bv75kB6zVFzV1pyvVP68m39D1tp5+F+DsPbgri73sqaen3ae/a03kZhM1Dto1NLymW04KkYhIyZxwHona+/9CCkqrr976LXfuy5jwuk9fLKWDjHveQnjtspoxeXHN5n0bN3EMaVK7zscupnWFm7wNePIfzl3nPvMjZBxw/1KdyUhlGtH0Lnm0HXPwXT153qFTCmfiOe7lL2oG4CQYhORsxJwEbVpMnzEV4Vd6iBZ60tAIvbgvj8wIH03+JXtBudjb4kbSgjMN7AbJkMFn8YcOz1sA5oKSiuz1nCvm3HF8txVEoZhvSHlMQ8j3UDTq51pdaXNvErqrx3yHYOsomNP3aJqq/Fp1AbjRchp3pa7DSiVcxs3JWvhAy48tJmoR3geYz3gEkWd5xWDb5c+W50BVHtPkE0xVTSn6CJHTsU8sw18hzQk5iqjrFdrLfDWrXutj+/q9uMzUtG1uSqvVlfY6GH/Ek2Xt1p4sX76h5VB4TXO9a9IPNmvGiLBlfirG4oTXXOwQDcgiTRtgnUuoQsvguWfXzvvzhrOGo50yYtNNcWtvqwefsmxn188Z+IvV0TkoOTAvJdQtzZ/OWWfvSwcm9k85f5pwM6qxOk/RBMzMhDaRE/dL9M2OL7uhP+YqQzWnpiqlBC5gleAb4ITVoV0TOHm1TnPQPXNZZePsZdYRdzPP0RjDpxC7+MtZ0X+691mcFTQaTN349b1ZCo8kGXpDUI3U2bXwDs93j1wdMSSgrTAz0w5Y0uKvxpPHeDGZ03q46VsIpZRNM72Fd/V1dh6oZLv3SdpxrWAn95H87MSwjr/Kp2rVBmRy/b8Hz1hkJ975fmYyfxVkP7ueEqsOIV+/xqlieS5jcHKJHEYHaLVMI+ZaEU5wcgXOqacmFQDWXMP5wnMqLuKyekprW2kA9qUzjyG9dbZtI03BXGDB26RmT8BOQmYZ75ayQrpM2LwU2wvzIfL+NdaLUafVzCmO2mnEHmL+CkTsELccd1tuq4RN8O0+VfoJ5fR+LMCVFyqlCWgW//huWv/87pCezrp5GWQ7MI7Oz9WtVjRF2IqzTprScGXkTOm3/mC8C3cPYmW1ranMKBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCASC38D/Uye3c077Y8QAAAAASUVORK5CYII=" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+  <title>Viet Nam Covid</title>
+</head>
+
+<body translate="no" >
+
+    
+        <div id="search" class="autocomplete" style="width:300px;">
+            <label for="myInput">Search:</label>
+            <input id="myInput" name="myInput" type="text" name="myCountry" placeholder="Tỉnh/Thành phố">
+        </div>
+        <input type="submit" id="submit" value="Tìm">
+      
+
+    <!-- <label for="search">Search:</label>
+    <div class="autocomplete" style="width:300px;">
+        <input type="text" id="search" name="search">
+    </div>
+    <button id="submit" >submit</button> -->
+
+    <button id="all" >Hiển thị tất cả</button>
+    <button id="khaibao" href="https://tokhaiyte.vn/">Khai báo y tế</button>
+
+    <table class="table" id="table">
+        <thead>
+          <tr id="need">
+            <th scope="col">Tỉnh/Thành phố</th>
+            <th scope="col">Số ca nhiễm mới trong ngày</th>
+            <th scope="col">Tổng số ca nhiễm</th>
+            
+            <th scope="col">Số ca tử vong</th>
+            <th scope="col">Số ca đã hồi phục trong ngày</th>
+           
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
+        <script id="rendered-js" >
+            //Khai bao
+            var khaiBao = document.getElementById('khaibao');
+            khaiBao.onclick = function(){
+                //window.location.href="https://tokhaiyte.vn/"
+               // window.location.assign('https://tokhaiyte.vn/'); 
+                window.open('https://tokhaiyte.vn/', '_blank');
+            };
+
+            //lay du lieu
+            $.getJSON('https://api.apify.com/v2/acts/dtrungtin~covid-vi/runs/last/dataset/items?token=apify_api_MubyYrel4FxlvZgsiFk2fwYgD0dmpL3L3soS',function(data){
+            var locations = data[0].locations;
+            console.log(data);
+            locations.sort(function(a, b){
+               return  b.casesToday - a.casesToday;
+            });
+            var tableRef  = document.getElementById('table');
+            function Show(location){
+                    var LocationName = location.name;  
+                            var casesToday = location.casesToday;
+                            var cases = location.cases; 
+                           // var NewDeaths = location.NewDeaths;
+                            var death = location.death;
+                            var recovered = location.recovered;
+                           // var TotalRecovered = location.TotalRecovered;
+                                
+                        
+                        //Xoa hang truoc do
+                        //if(count > 0){tableRef.deleteRow(-1);}
+                        
+                        //tableRef.deleteRow(1);
+                        //Them hang
+                        let newRow = tableRef.insertRow(-1);
+                        //Them cot
+                        let newCell0 = newRow.insertCell(-1);
+                        newCell0.style.fontWeight = "bold";
+                        let newCell1 = newRow.insertCell(-1);
+                        let newCell2 = newRow.insertCell(-1);
+                        let newCell3 = newRow.insertCell(-1);
+                        let newCell4 = newRow.insertCell(-1);
+                      //  let newCell5 = newRow.insertCell(-1);
+                       // let newCell6 = newRow.insertCell(-1);
+                        
+                        //Set gia tri cho cac cot
+                        newCell0.innerHTML = LocationName;
+                        newCell1.innerHTML = casesToday.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+                        newCell2.innerHTML = cases.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+                        newCell3.innerHTML = death.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+                        newCell4.innerHTML = recovered;
+                        //newCell5.innerHTML = NewRecovered;
+                        //newCell6.innerHTML = TotalRecovered;
+
+                };
+
+            //Show tat ca
+            var showAll = document.getElementById('all');
+            showAll.onclick = function(){
+                document.getElementById("myInput").value = "";
+                
+                for(var i = tableRef.rows.length - 1; i > 0; i--)
+                    {
+                        table.deleteRow(i);
+                    }
+
+                    locations.forEach(location => {                  
+                    Show(location);   
+                            
+                });console.log(locations); 
+            };
+          
+
+            //Tim quoc gia
+
+            var LocationNames = [];
+            for( var i = 0; i < locations.length; i++)
+            {
+            
+                LocationNames[i] = data[0].locations[i].name;
+                
+            }
+
+            function autocomplete(inp, arr) {
+                /*the autocomplete function takes two arguments,
+                the text field element and an array of possible autocompleted values:*/
+                var currentFocus;
+                /*execute a function when someone writes in the text field:*/
+                inp.addEventListener("input", function(e) {
+                    var a, b, i, val = this.value;
+                    /*close any already open lists of autocompleted values*/
+                    closeAllLists();
+                    if (!val) { return false;}
+                    currentFocus = -1;
+                    /*create a DIV element that will contain the items (values):*/
+                    a = document.createElement("DIV");
+                    a.setAttribute("id", this.id + "autocomplete-list");
+                    a.setAttribute("class", "autocomplete-items");
+                    /*append the DIV element as a child of the autocomplete container:*/
+                    this.parentNode.appendChild(a);
+                    /*for each item in the array...*/
+                    for (i = 0; i < arr.length; i++) {
+                        /*check if the item starts with the same letters as the text field value:*/
+                        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                            b.addEventListener("click", function(e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                        }
+                    }
+                });
+                /*execute a function presses a key on the keyboard:*/
+                inp.addEventListener("keydown", function(e) {
+                    var x = document.getElementById(this.id + "autocomplete-list");
+                    if (x) x = x.getElementsByTagName("div");
+                    if (e.keyCode == 40) {
+                        /*If the arrow DOWN key is pressed,
+                        increase the currentFocus variable:*/
+                        currentFocus++;
+                        /*and and make the current item more visible:*/
+                        addActive(x);
+                    } else if (e.keyCode == 38) { //up
+                        /*If the arrow UP key is pressed,
+                        decrease the currentFocus variable:*/
+                        currentFocus--;
+                        /*and and make the current item more visible:*/
+                        addActive(x);
+                    } else if (e.keyCode == 13) {
+                        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                        e.preventDefault();
+                        if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                        }
+                    }
+                });
+                function addActive(x) {
+                    /*a function to classify an item as "active":*/
+                    if (!x) return false;
+                    /*start by removing the "active" class on all items:*/
+                    removeActive(x);
+                    if (currentFocus >= x.length) currentFocus = 0;
+                    if (currentFocus < 0) currentFocus = (x.length - 1);
+                    /*add class "autocomplete-active":*/
+                    x[currentFocus].classList.add("autocomplete-active");
+                }
+                function removeActive(x) {
+                    /*a function to remove the "active" class from all autocomplete items:*/
+                    for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                    }
+                }
+                function closeAllLists(elmnt) {
+                    /*close all autocomplete lists in the document,
+                    except the one passed as an argument:*/
+                    var x = document.getElementsByClassName("autocomplete-items");
+                    for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+                }
+                /*execute a function when someone clicks in the document:*/
+                document.addEventListener("click", function (e) {
+                    closeAllLists(e.target);
+                });
+                }
+
+
+            autocomplete(document.getElementById("myInput"), LocationNames);
+
+            var submit = document.getElementById("submit");
+            //Bien dem
+            var count = 0;   
+            submit.onclick = function(){
+                //xoa cac hang truoc do
+                for(var i = tableRef.rows.length - 1; i > 0; i--)
+                    {
+                        table.deleteRow(i);
+                    }
+                    console.log(tableRef.rows.length);
+                var search = document.getElementById("myInput").value;   
+                console.log("search"); 
+                locations.forEach(locationn => {
+                    if(locationn.name == search){
+                        Show(locationn);
+                    };                  
+                });
+                count++;
+
+         
+
+            
+                
+
+            };
+            
+            console.log("sau khi click");
+            console.log(count);
+
+           
+
+
+
+        
+            });
+        </script>
+
+  
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+ 
