@@ -14,16 +14,16 @@
 
 <body translate="no" >  
     <div id="container">  
-    <div id="searchComponent">
-        <label for="myInput">Search:</label>
-        <div id="search" class="autocomplete" style="width:200px;">
-            <input id="myInput" name="myInput" type="text" name="myCountry" placeholder="Tỉnh/Thành phố">
+        <div id="searchComponent">
+            <label for="myInput">Search:</label>
+            <div id="search" class="autocomplete" style="width:200px;">
+                <input id="myInput" name="myInput" type="text" name="myCountry" placeholder="Tỉnh/Thành phố">
+            </div>
         </div>
-    </div>
     <div id="btn">
-    <input type="submit" id="submit" value="Tìm">
-    <button id="all" >Hiển thị tất cả</button>
-    <button id="khaibao" href="https://tokhaiyte.vn/">Khai báo y tế</button>
+        <input type="submit" id="submit" value="Tìm">
+        <button id="all" >Hiển thị tất cả</button>
+        <button id="khaibao" href="https://tokhaiyte.vn/">Khai báo y tế</button>
     </div>  
     <table class="table" id="table">
         <thead>
@@ -39,74 +39,73 @@
           
         </tbody>
       </table>
-      <footer><img src="https://bvndtp.org.vn/wp-content/uploads/2020/09/thong-diep-5k.jpg" alt=""></footer>
+      <!-- <footer><img src="https://bvndtp.org.vn/wp-content/uploads/2020/09/thong-diep-5k.jpg" alt=""></footer> -->
   
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-        <script id="rendered-js" >
-            //Khai bao
-            var khaiBao = document.getElementById('khaibao');
-            khaiBao.onclick = function(){
-                //window.location.href="https://tokhaiyte.vn/"
-               // window.location.assign('https://tokhaiyte.vn/'); 
-                window.open('https://tokhaiyte.vn/', '_blank');
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'>
+    </script>
+    <script id="rendered-js" >
+        //Khai bao
+        var khaiBao = document.getElementById('khaibao');
+        khaiBao.onclick = function(){
+            //window.location.href="https://tokhaiyte.vn/"
+            // window.location.assign('https://tokhaiyte.vn/'); 
+            window.open('https://tokhaiyte.vn/', '_blank');
+        };
+
+        //lay du lieu
+        $.getJSON('https://api.apify.com/v2/acts/dtrungtin~covid-vi/runs/last/dataset/items?token=apify_api_MubyYrel4FxlvZgsiFk2fwYgD0dmpL3L3soS',function(data){
+            // $.getJSON('https://api.apify.com/v2/acts/dtrungtin~covid-vi/run-sync-get-dataset-items?token=apify_api_MubyYrel4FxlvZgsiFk2fwYgD0dmpL3L3soS',function(data){
+        var locations = data[0].locations;
+        console.log(data);
+        locations.sort(function(a, b){
+            return  b.casesToday - a.casesToday;
+        });
+        var tableRef  = document.getElementById('table');
+        function Show(location){
+            var LocationName = location.name;  
+            var casesToday = location.casesToday;
+            var cases = location.cases; 
+            // var NewDeaths = location.NewDeaths;
+            var death = location.death;
+            var recovered = location.recovered;
+            let newRow = tableRef.insertRow(-1);
+            //Them cot
+            let newCell0 = newRow.insertCell(-1);
+            newCell0.style.fontWeight = "bold";
+            let newCell1 = newRow.insertCell(-1);
+            let newCell2 = newRow.insertCell(-1);
+            let newCell3 = newRow.insertCell(-1);
+            let newCell4 = newRow.insertCell(-1);
+            newCell0.style.color = "#F0F2F5";
+            newCell1.style.color = "white";
+            newCell2.style.color = "white";
+            newCell3.style.color = "white";
+            newCell4.style.color = "white";
+
+            newCell0.innerHTML = LocationName;
+            newCell1.innerHTML = casesToday.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            newCell2.innerHTML = cases.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            newCell3.innerHTML = death.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            newCell4.innerHTML = recovered;
             };
 
-            //lay du lieu
-            $.getJSON('https://api.apify.com/v2/acts/dtrungtin~covid-vi/runs/last/dataset/items?token=apify_api_MubyYrel4FxlvZgsiFk2fwYgD0dmpL3L3soS',function(data){
-                // $.getJSON('https://api.apify.com/v2/acts/dtrungtin~covid-vi/run-sync-get-dataset-items?token=apify_api_MubyYrel4FxlvZgsiFk2fwYgD0dmpL3L3soS',function(data){
-            var locations = data[0].locations;
-            console.log(data);
-            locations.sort(function(a, b){
-               return  b.casesToday - a.casesToday;
-            });
-            var tableRef  = document.getElementById('table');
-            function Show(location){
-                var LocationName = location.name;  
-                var casesToday = location.casesToday;
-                var cases = location.cases; 
-                // var NewDeaths = location.NewDeaths;
-                var death = location.death;
-                var recovered = location.recovered;
-                let newRow = tableRef.insertRow(-1);
-                //Them cot
-                let newCell0 = newRow.insertCell(-1);
-                newCell0.style.fontWeight = "bold";
-                let newCell1 = newRow.insertCell(-1);
-                let newCell2 = newRow.insertCell(-1);
-                let newCell3 = newRow.insertCell(-1);
-                let newCell4 = newRow.insertCell(-1);
-
-                newCell0.innerHTML = LocationName;
-                newCell1.innerHTML = casesToday.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-                newCell2.innerHTML = cases.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-                newCell3.innerHTML = death.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-                newCell4.innerHTML = recovered;
-                };
-
-                //Show tat ca
-                var showAll = document.getElementById('all');
-                showAll.onclick = function(){
-                    document.getElementById("myInput").value = "";
-                    
-                    for(var i = tableRef.rows.length - 1; i > 0; i--)
-                        {
-                            table.deleteRow(i);
-                        }
-
-                        locations.forEach(location => {                  
-                        Show(location);   
-                                
-                    });console.log(locations); 
-                };
+            //Show tat ca
+            var showAll = document.getElementById('all');
+            showAll.onclick = function(){
+                document.getElementById("myInput").value = "";
+                
+                for(var i = tableRef.rows.length - 1; i > 0; i--){
+                        table.deleteRow(i);
+                    }
+                    locations.forEach(location => {                  
+                    Show(location);                               
+                });console.log(locations); 
+            };
 
             var LocationNames = [];
-            for( var i = 0; i < locations.length; i++)
-            {
-            
-                LocationNames[i] = data[0].locations[i].name;
-                
+            for( var i = 0; i < locations.length; i++){            
+                LocationNames[i] = data[0].locations[i].name;                
             }
-
             function autocomplete(inp, arr) {
                 /*the autocomplete function takes two arguments,
                 the text field element and an array of possible autocompleted values:*/
@@ -203,20 +202,15 @@
                     closeAllLists(e.target);
                 });
                 }
-
-
             autocomplete(document.getElementById("myInput"), LocationNames);
-
             var submit = document.getElementById("submit");
             //Bien dem
             var count = 0;   
             submit.onclick = function(){
                 //xoa cac hang truoc do
-                for(var i = tableRef.rows.length - 1; i > 0; i--)
-                    {
+                for(var i = tableRef.rows.length - 1; i > 0; i--){
                         table.deleteRow(i);
                     }
-                    console.log(tableRef.rows.length);
                 var search = document.getElementById("myInput").value;   
                 console.log("search"); 
                 locations.forEach(locationn => {
@@ -226,9 +220,8 @@
                 });
                 count++;                             
             };                    
-            });
-        </script>
-        </div>
+        });
+    </script>
 </body>
 </html>
  
