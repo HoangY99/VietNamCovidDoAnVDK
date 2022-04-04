@@ -94,16 +94,16 @@
             showAll.onclick = function(){
                 document.getElementById("myInput").value = "";
                 
-                for(var i = tableRef.rows.length - 1; i > 0; i--){
-                        table.deleteRow(i);
-                    }
-                    locations.forEach(location => {                  
+                for ( var i = tableRef.rows.length - 1; i > 0; i-- ){
+                    table.deleteRow(i);
+                }
+                locations.forEach(location => {                  
                     Show(location);                               
-                });console.log(locations); 
+                });
             };
 
             var LocationNames = [];
-            for( var i = 0; i < locations.length; i++){            
+            for ( var i = 0; i < locations.length; i++ ){            
                 LocationNames[i] = data[0].locations[i].name;                
             }
             function autocomplete(inp, arr) {
@@ -202,6 +202,7 @@
                     closeAllLists(e.target);
                 });
                 }
+
             autocomplete(document.getElementById("myInput"), LocationNames);
             var submit = document.getElementById("submit");
             //Bien dem
@@ -209,10 +210,9 @@
             submit.onclick = function(){
                 //xoa cac hang truoc do
                 for(var i = tableRef.rows.length - 1; i > 0; i--){
-                        table.deleteRow(i);
-                    }
+                    table.deleteRow(i);
+                }
                 var search = document.getElementById("myInput").value;   
-                console.log("search"); 
                 locations.forEach(locationn => {
                     if(locationn.name == search){
                         Show(locationn);
